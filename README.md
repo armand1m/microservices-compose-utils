@@ -23,7 +23,7 @@ It can also be used to run multiple microservices together as well.
 
  ```shell
  # run it in your project's root folder.
- $ git submodule add https://github.com/armand1m/microservices-compose-utils
+ $ git submodule add https://github.com/armand1m/microservices-compose-utils ./commands
  ```
 
  Use it:

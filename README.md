@@ -22,5 +22,22 @@ It can also be used to run multiple microservices together as well.
  Make sure you have Docker running, and Docker Compose in your machine.
 
  ```shell
- git submodule add https://github.com/armand1m/microservices-compose-utils
+ # run it in your project's root folder.
+ $ git submodule add https://github.com/armand1m/microservices-compose-utils
+ ```
+
+ Use it:
+
+ ```shell
+ # initialize git submodules
+ $ ./commands/init
+
+ # build docker images
+ $ ./commands/build
+
+ # run services
+ $ ./commands/run
+
+ # inspect their logs
+ $ ./commands/logs
  ```

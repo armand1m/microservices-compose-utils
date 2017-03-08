@@ -14,6 +14,8 @@ It can also be used to run multiple microservices together as well.
    - [x] `run <service-name>`: Runs a service and its dependencies, if specified.
    - [x] `run --build`: Forces rebuild and runs all services.
    - [x] `run --build <service-name>`: Forces rebuild and runs a single service.
+ - [x] `test`: Runs the `docker-compose.test.yml` defined.
+   - [ ] `test <service-name>`: Runs a single service test suite.
  - [x] `logs`: Get services logs to STDOUT
    - [x] `logs -f`: Follow all services logs to STDOUT
    - [x] `logs <service-name>`: Get a single service logs to STDOUT
@@ -45,6 +47,9 @@ It can also be used to run multiple microservices together as well.
 
  # build docker images
  $ ./commands/build
+
+ # testing services
+ $ ./commands/test
 
  # run services
  $ ./commands/run

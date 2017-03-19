@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "==> Generating environment in $1."
+mkdir -p $1
+cd $1
+git init
+git submodule add https://github.com/armand1m/microservices-compose-utils ./commands
+git submodule add https://github.com/armand1m/core-services
+git add -A
+git commit -m "chore(project): Added core-services and compose-utils to project."
+touch docker-compose.yml
+cat <<EOT >> docker-compose.yml
+version: '2'
+services:
+  consul:
+    extends:
+      file: ./core-services/services.yml
+      service: consul_service
+
+  gateway:
+    extends:
+      file: ./core-services/services.yml
+      service: fabio_service
+    links:
+      - consul
+EOT
+git add -A 
+git commit -m "build(compose): Extending core-services."

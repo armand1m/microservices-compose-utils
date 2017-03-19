@@ -22,9 +22,13 @@ It can also be used to run multiple microservices together as well.
    - [x] `logs -f <service-name>`: Follow a single service logs to STDOUT
  - [x] `status`: See the containers status.
  - [x] `destroy`: Stop and remove containers.
+ - [x] `clean`: Stop containers and remove dangling images.
  - [x] `scale <service>=<number-of-insrtances>`: Scale the number of instances of a service container.
  - [ ] `deploy`: Deploy images to a docker registry.
  - [ ] `publish`: Publish environment into single host or cluster.
+ - [ ] `generate`: Generators Utility.
+   - [ ] `generate service`<path>: Service Generators Utility.
+   - [x] `generate/environment <path>`: Environment Generator Utility.
 
  ## Using this repository
 
@@ -62,4 +66,7 @@ It can also be used to run multiple microservices together as well.
 
  # see all services status
  $ ./commands/status
+
+ # generate environment with gateway and service discovery containers configured
+ $ ./commands/generate/environment ~/Projects/new-environment
  ```

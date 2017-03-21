@@ -1,1 +1,9 @@
-echo "to be implemented."
+#!/bin/bash
+
+run () {
+  echo "==> $2"
+  $1
+}
+
+git clone --recursive https://github.com/armand1m/microservice-barebone $1
+cd $1 && git remote remove origin
